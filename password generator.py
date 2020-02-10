@@ -27,7 +27,7 @@ def GeneratePassword(lengthOfPassword):
     lowerCaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     upperCaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     numbers = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9']
-    symbols = ['!', '"', '£', '$', '^', '&', '*', '(', ')', '-', '_', '=', '+', '{', '}', '[', ']', ':', ';', "'", '@', '~', '#', ',', '.', '<','>','?','/']
+    symbols = ['!', '"', 'Â£', '$', '^', '&', '*', '(', ')', '-', '_', '=', '+', '{', '}', '[', ']', ':', ';', "'", '@', '~', '#', ',', '.', '<','>','?','/']
     allCharacters = [lowerCaseLetters, upperCaseLetters, numbers, symbols] #Characters that can be selected
 
     password = "" #Empty string that will be added to upon input.
@@ -56,9 +56,9 @@ def GeneratePassword(lengthOfPassword):
             password = password + randomCharacter
 
     print("Here is your randomly generated password: " + password)#Outputs the password
-    newPassword() #Calls the function that asks the user if they want to generate another password
+    NewPassword() #Calls the function that asks the user if they want to generate another password
 
-def newPassword():
+def NewPassword():
     newQuestion = input("Would you like to generate another password (y/n)?")
 
     if newQuestion == 'y' or newQuestion == 'Y' or newQuestion == "yes" or newQuestion == 'YES' or newQuestion == "Yes":
@@ -70,6 +70,6 @@ def newPassword():
 
     else:
         print("Invalid input")
-        newPassword() #Asks again
+        NewPassword() #Asks again
 
 AskForLengthOfPassword()
