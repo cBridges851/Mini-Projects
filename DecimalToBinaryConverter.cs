@@ -5,7 +5,7 @@ class Solution {
     static void Main(string[] args) {
 		Console.ForegroundColor = ConsoleColor.Green;
 		Console.Write("Please input an integer: ");
-        int input = Convert.ToInt32(Console.ReadLine());
+        var input = Convert.ToInt32(Console.ReadLine());
         var binary = ConvertToBinary(input);
 		
 		Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -29,7 +29,7 @@ class Solution {
         
         do
         {
-            double copyDenary = denary;
+            var copyDenary = (double) denary;
             //CB 2020-08-23 Half denary
             denary = denary/2;
             copyDenary = copyDenary/2;
