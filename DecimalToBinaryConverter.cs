@@ -22,21 +22,20 @@ class Solution {
 		Console.ReadKey();
     }
 
-    static List<int> ConvertToBinary(int n)
+    static List<int> ConvertToBinary(int denary)
     {
         //CB 2020-08-23 Create list for 0s and 1s
         var binary = new List<int>();
-        //CB 2020-08-23 While n != 0.5
         
         do
         {
-            double value = n;
-            //CB 2020-08-23 Half n
-            n = n/2;
-            value = value/2;
+            double copyDenary = denary;
+            //CB 2020-08-23 Half denary
+            denary = denary/2;
+            copyDenary = copyDenary/2;
             
             //CB 2020-08-23 If there is a remainder, add 1 to list
-            if (value % 2 == 1)
+            if (copyDenary % 2 == 1)
             {
                 binary.Add(0);
             }
@@ -47,7 +46,7 @@ class Solution {
                 binary.Add(1);
             }
         }
-        while(n > 0);
+        while(denary > 0);
 
         binary.Reverse();
         return binary;
